@@ -1,0 +1,14 @@
+mkdir /usr/local/ispconfig/interface/web/csf/
+mkdir /usr/local/ispconfig/interface/web/csf/form
+mkdir /usr/local/ispconfig/interface/web/csf/lib
+mkdir /usr/local/ispconfig/interface/web/csf/lib/lang
+mkdir /usr/local/ispconfig/interface/web/csf/list/
+mkdir /usr/local/ispconfig/interface/web/csf/templates
+/bin/cp -avf /etc/csf/ispconfig/* /usr/local/ispconfig/interface/web/csf/
+chown -R ispconfig:ispconfig /usr/local/ispconfig/interface/web/csf/
+find /usr/local/ispconfig/interface/web/csf -type f -exec chmod 644 {} \;
+find /usr/local/ispconfig/interface/web/csf -type d -exec chmod 755 {} \;
+gcc -o /usr/local/ispconfig/interface/web/csf/ispconfig_csf /usr/local/ispconfig/interface/web/csf/ispconfig_csf.c
+chown root:root /usr/local/ispconfig/interface/web/csf/ispconfig_csf
+chmod -v 4755 /usr/local/ispconfig/interface/web/csf/ispconfig_csf
+chmod 755 /usr/local/ispconfig/interface/web/csf/ispconfig_csf.cgi

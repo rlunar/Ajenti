@@ -6,9 +6,13 @@
 ##############
 
 # Provision Base Packages
-scripts/base.sh
+# scripts/base.sh
 
-scripts/tunning.sh
+# Server Tunning
+# scripts/tunning.sh
+
+# Server Firewall
+# scripts/firewall.sh
 
 
 ###############
@@ -16,7 +20,7 @@ scripts/tunning.sh
 ###############
 
 # Provision Ajenti (Nginx/PHP/MySQL/NodeJS/Python)
-scripts/ajenti.sh
+# scripts/ajenti.sh
 
 # Provision PHP
 # scripts/php.sh
@@ -44,19 +48,20 @@ scripts/ajenti.sh
 # scripts/elasticsearch.sh
 
 # Install SphinxSearch
-#scripts/sphinxsearch.sh
+# scripts/sphinxsearch.sh
 
 # Search Server Administration (web-based)
+# NOT GOOD X X X X X X X
 # Install ElasticHQ
 # scripts/elastichq.sh
-
+# NOT GOOD X X X X X X X
 
 ####################
 # In-Memory Stores #
 ####################
 
 # Install Memcached
-# scripts/memcaches.sh
+# scripts/memcached.sh
 
 # Provision Redis (with journaling and persistence)
 # scripts/redis.sh
@@ -84,16 +89,19 @@ scripts/ajenti.sh
 # Additional Languages #
 ########################
 
+# NOT GOOD X X X X X X X
 # Install Nodejs
 # scripts/nodejs.sh
-
+# NOT GOOD X X X X X X X
 
 ##########################
 # Frameworks and Tooling #
 ##########################
 
+# NOT GOOD X X X X X X X
 # Provision Composer
 # scripts/composer.sh
+# NOT GOOD X X X X X X X
 
 # Install Mailcatcher
 # http://mailcatcher.me/
@@ -102,3 +110,7 @@ scripts/ajenti.sh
 # Install Ansible
 # scripts/ansible.sh
 
+# restart all
+sudo service php5-fpm restart
+sudo service nginx restart
+sudo service ajenti restart

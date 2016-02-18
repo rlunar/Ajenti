@@ -16,11 +16,11 @@ COMPOSER_IS_INSTALLED=$?
 
 # Getting the arguments
 GITHUB_OAUTH = ""
-composer_packages = [
-  #"phpunit/phpunit:4.0.*",
-  #"codeception/codeception=*",
-  #"phpspec/phpspec:2.0.*@dev",
-  #"squizlabs/php_codesniffer:1.5.*",
+COMPOSER_PACKAGES=[
+  "phpunit/phpunit",
+  # "codeception/codeception=*",
+  # "phpspec/phpspec:2.0.*@dev",
+  # "squizlabs/php_codesniffer:1.5.*",
 ]
 
 # True, if composer is not installed
@@ -44,7 +44,7 @@ fi
 # Install Global Composer Packages if any are given
 if [[ ! -z ${COMPOSER_PACKAGES} ]]; then
     echo ">>> Installing Global Composer Packages:"
-    echo "    " ${{COMPOSER_PACKAGES}[@]}
+    echo "    " ${COMPOSER_PACKAGES[@]}
     
     # Add Composer's Global Bin to ~/.profile path
     if [[ -f "/home/vagrant/.profile" ]]; then
@@ -59,5 +59,5 @@ if [[ ! -z ${COMPOSER_PACKAGES} ]]; then
         fi
     fi
     
-    composer global require ${{COMPOSER_PACKAGES}[@]}
+    composer global require ${COMPOSER_PACKAGES[@]}
 fi

@@ -2,7 +2,7 @@
 
 echo ">>> Installing Sphinx"
 
-sphinxsearch_version="stable"
+sphinxsearch_version="rel22"
 
 # Add sphinxsearch repo
 sudo add-apt-repository -y ppa:builds/sphinxsearch-${sphinxsearch_version}

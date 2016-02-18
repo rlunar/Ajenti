@@ -5,6 +5,7 @@ https://easyengine.io/tutorials/linux/sysctl-conf/
 
 ```bash
 $ sysctl -p
+$ vagrant up --provider=virtualbox;
 ```
 
 http://www.queryadmin.com/939/10000-concurrent-connections-nginx-php-fpm-mysql/  
@@ -15,3 +16,4 @@ http://www.queryadmin.com/939/10000-concurrent-connections-nginx-php-fpm-mysql/
 ###### [/etc/php5/fpm/pool.d/www.conf]
 
 ###### [/etc/mysql/my.cnf]
+

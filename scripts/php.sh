@@ -11,10 +11,19 @@ apt-get install -qq php5-imagick
 apt-get install -qq php5-intl
 apt-get install -qq php5-json
 apt-get install -qq php5-memcached
-apt-get install -qq php5-mcrypt
 apt-get install -qq php5-mysqlnd
+apt-get install -qq php5-pgsql
 apt-get install -qq php5-redis
 apt-get install -qq php5-sqlite
 apt-get install -qq php5-xsl
 apt-get install -qq php-pear
+
+# install mcrypt
+apt-get install php5-mcrypt
+echo "extension=mcrypt.so" >> /etc/php5/cli/php.ini
+echo "extension=mcrypt.so" >> /etc/php5/fpm/php.ini
+
+# restart all
+service php5-fpm restart
+service nginx restart
 service ajenti restart

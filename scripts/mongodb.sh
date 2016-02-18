@@ -19,6 +19,7 @@ PHP_IS_INSTALLED=$?
 if [ ${PHP_IS_INSTALLED} -eq 0 ]; then
     # install dependencies
     sudo apt-get -y install php-pear php5-dev
+    sudo pip install pymongo
 
     # install php extension
     echo "no" > answers.txt
