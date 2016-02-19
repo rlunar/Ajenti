@@ -14,6 +14,8 @@
 # Server Firewall
 # scripts/firewall.sh
 
+# Provision Docker
+# scripts/docker.sh "permissions"
 
 ###############
 # Web Servers #
