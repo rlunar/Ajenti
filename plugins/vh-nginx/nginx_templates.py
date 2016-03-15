@@ -179,8 +179,8 @@ server {
     %(ssl_key)s
     %(server_name)s
 
-    access_log /var/log/nginx/%(slug)s.access.log;
-    error_log /var/log/nginx/%(slug)s.error.log;
+    access_log /var/log/nginx/%(slug)s.access.log buffer=16k;
+    error_log /var/log/nginx/%(slug)s.error.log buffer=16k;
 
     root %(root)s;
     index index.html index.htm index.php;
